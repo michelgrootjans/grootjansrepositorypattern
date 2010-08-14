@@ -18,7 +18,7 @@ namespace RepositoryExperiments.Domain.Queries
         public IQueryResult<Customer> Execute(ISession session)
         {
             var query = session.Linq<Customer>().Where(c => c.Name == name);
-            return new LinqQueryResult<Customer>(query);
+            return new LinqResult<Customer>(query);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace RepositoryExperiments.ConsoleApp
             try
             {
                 InitializeNHibernate();
+                NHibernateHelper.BeginTransaction();
                 InsertCustomers();
                 var allCustomers = GetAllCustomers();
 
@@ -23,9 +24,11 @@ namespace RepositoryExperiments.ConsoleApp
                     Console.WriteLine("- Customer: {0}", customer.Name);
 
                 Console.WriteLine("Wohoo!");
+                NHibernateHelper.CommitTransaction();
             }
             catch (Exception e)
             {
+                NHibernateHelper.RollbackTransaction();
                 Console.WriteLine(e);
             }
             Console.ReadLine();
@@ -39,20 +42,10 @@ namespace RepositoryExperiments.ConsoleApp
 
         private static void InsertCustomers()
         {
-            NHibernateHelper.BeginTransaction();
-            try
-            {
-                var repository = new NHibernateRepository();
-                repository.Add(new Customer("IKEA"));
-                repository.Add(new Customer("Starbucks"));
-                repository.Add(new Customer("Budweiser"));
-                NHibernateHelper.CommitTransaction();
-            }
-            catch
-            {
-                NHibernateHelper.RollbackTransaction();
-                throw;
-            }
+            var repository = new NHibernateRepository();
+            repository.Add(new Customer("IKEA"));
+            repository.Add(new Customer("Starbucks"));
+            repository.Add(new Customer("Budweiser"));
         }
 
         private static void InitializeNHibernate()

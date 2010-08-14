@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace RepositoryExperiments.DataAccess
+namespace RepositoryExperiments.Domain.DataAccess
 {
-    public class LinqQueryResult<T> : IQueryResult<T>
+    public class LinqResult<T> : IQueryResult<T>
     {
         private readonly IQueryable<T> query;
 
-        public LinqQueryResult(IQueryable<T> query)
+        public LinqResult(IQueryable<T> query)
         {
             this.query = query;
         }

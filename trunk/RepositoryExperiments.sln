@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExperiments.Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExperiments.UnitTests", "RepositoryExperiments.UnitTests\RepositoryExperiments.UnitTests.csproj", "{41A505D9-4603-4DEC-AEAB-B39FE51F295A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExperiments.Domain", "RepositoryExperiments.Entities\RepositoryExperiments.Domain.csproj", "{B1D7AC9B-7739-4101-8306-8D14C63133F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryExperiments.Domain", "RepositoryExperiments.Domain\RepositoryExperiments.Domain.csproj", "{B1D7AC9B-7739-4101-8306-8D14C63133F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
