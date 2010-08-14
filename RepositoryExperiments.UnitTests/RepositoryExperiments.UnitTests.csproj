@@ -82,7 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RepositoryExperiments.Entities\RepositoryExperiments.Domain.csproj">
+    <ProjectReference Include="..\RepositoryExperiments.Domain\RepositoryExperiments.Domain.csproj">
       <Project>{B1D7AC9B-7739-4101-8306-8D14C63133F8}</Project>
       <Name>RepositoryExperiments.Domain</Name>
     </ProjectReference>
