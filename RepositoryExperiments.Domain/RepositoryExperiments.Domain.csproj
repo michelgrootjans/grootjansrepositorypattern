@@ -57,6 +57,8 @@
     <Compile Include="DataAccess\ISessionProvider.cs" />
     <Compile Include="DataAccess\IStateHolder.cs" />
     <Compile Include="DataAccess\LinqResult.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\ICustomer.cs" />
     <Compile Include="Maps\CustomerMap.cs" />
     <Compile Include="DataAccess\NHibernateHelper.cs" />
     <Compile Include="DataAccess\NHibernateRepository.cs" />

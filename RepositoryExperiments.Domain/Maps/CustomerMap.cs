@@ -7,7 +7,7 @@ namespace RepositoryExperiments.Domain.Maps
     {
         public CustomerMap()
         {
-            Id(c => c.Id);
+            Id(c => c.Id).Access.LowerCaseField();
             Map(c => c.Name);
         }
     }
